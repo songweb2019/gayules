@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GayuLes----login</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+<div class="container">
+    <!-- 广告图 -->
+    <a href="index.html">
+        <img src="../img/index/login/Advertising.png" class="mt-2 img-fluid" title="广告"/>
+    </a>
+
+    <!--登录标题 卡片+折叠 -->
+    <div id="parent" class="mt-5">
+       <div class="card">
+           <div class="card-header">
+               <a class="text-center card-link" data-toggle="collapse" href="#one" id="loginone" title="login">₪.LOGIN</a>
+           </div>
+       </div>
+    </div>
+
+    <!-- 登录主体  -->
+    <div class="collapse" data-target="#parent" id="one">
+        <!-- 登录表单 -->
+        <div id="formlogin" class="box">
+                <!-- 账号 -->
+                <div class="mt-5 input_box">
+                   <input id="uname" type="text" class="form-control col-form-label ml-3" placeholder=" Account： 3~11"/>
+                </div>
+                <!-- 密码 -->
+                <div class="mt-4 input_box">
+                    <input id="upwd" type="password" class="form-control col-form-label ml-3" placeholder=" Password： 6~16"/>
+                </div>
+                <div id="error_box"><br/></div>
+                <!-- 自动登录 -->
+                <div class="mt-3">
+                    <input type="checkbox" id="auto" class="mt-3 font-weight-bold  ml-4"/><label for="auto" title="自动登录">Auto login</label>
+                    <a href="#" class="float-right mt-3" title="忘记密码">Forget?</a>
+                </div>
+                <!-- 登录、重置 -->
+                <div class="mt-3 mb-5 text-center input_box">
+                    <input class="btn btn-outline-primary" value="Login" title="登录" onclick="login()"/>
+                </div>
+        </div>
+    </div>
+
+    <!-- 如果没有账号，请先注册，点此注册 -->
+    <div class="card mt-2">
+        <span class="text-center" title="如果没有账号，请先注册，点此注册"> <a href="javascript:;">If there is no account, please register first and click here to register.</a> </span>
+     </div>
+    <div class="card mt-2 display-1">
+        <a class="text-center card-header" href="register.html" id="regisone">REGIS</a>
+    </div>
+</div>
+
+<!--引入 “脚”-->
+<footer>
+    <iframe src="footer.html" frameborder="0" scrolling="no" class="my_footer"></iframe>
+</footer>
+
+<script>
+/* // AJAX
+   function login(){
+        //1.创建xhr
+        var xhr=new XMLHttpRequest();
+        //4.绑定监听
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4&&xhr.status==200){
+                var result=xhr.responseText;
+                 alert(result);
+            }
+        }
+        //2.创建请求
+        xhr.open("post","/gus/login",true);
+        //3.发送请求
+          //修改请求头
+          xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+          var formdata="uname="+uname.value+"&upwd="+upwd.value;
+          xhr.send(formdata);
+    }
+  */
+
+  //javascrapt  模拟登陆
+   function login(){
+       var oUname = document.getElementById("uname");
+       var oUpwd = document.getElementById("upwd");
+       var oError = document.getElementById("error_box");
+       var isError = true;
+         if(oUname.value.length>11 || oUname.value.length<3){
+            oError.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;用户名输入3-11位字母+数字";
+             isError = false;
+             return;
+         }else if((oUname.value.charCodeAt(0)>=48)&&(oUname.value.charCodeAt(0)<=57)){
+           oError.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;用户名首字母必须为字母";
+             return;
+         }
+         if(oUpwd.value.length>16 || oUpwd.value.length<6){
+             oError.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;密码请输入6-16位字符"
+             isError = false;
+             return;
+         }
+       window.alert("登陆成功");
+       window.location.href="index.html";
+   }
+</script>
+</body>
+</html>	

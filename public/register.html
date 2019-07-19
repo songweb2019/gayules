@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GayuLes----regis</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
+</head>
+<body>
+<div class="container">
+    <!-- 广告图 -->
+    <a href="index.html">
+        <img src="../img/index/login/Advertising.png" class="mt-2 img-fluid" title="广告"/>
+    </a>
+
+    <!-- 注册标题 卡片+折叠-->
+    <div id="parent" class="mt-5">
+        <div class="card">
+            <div class="card-header">
+                <a class="text-center card-link" data-toggle="collapse" href="#one" id="regisone" title="regis">₪.REGIS</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 注册主体 -->
+    <div class="collapse" data-target="#parent" id="one">
+        <!-- 注册表单 -->
+        <div id="formregis">
+            <form method="post" action="/mygus/register" class="form-group">
+                <div class="text-center mt-5">
+                    <!-- 用户名(账号) -->
+                   <input id="regis1" class="form-control" type="text" maxlength="11" placeholder="Account：Letter Number 3~11" title="请输入用户名/账号/ID" name="uname"/>
+                </div>
+                <div class="text-center mt-3">
+                    <!-- 密码 -->
+                    <input  id="regis2" class="form-control"  type="password" maxlength="16" placeholder="Password：Letter Number 6~16" title="请输入密码" name="upwd"/>
+                </div>
+                <div class="text-center mt-3">
+                    <!-- 邮箱 -->
+                    <input  id="regis3" class="form-control" type="email" name="email" placeholder="email：www.xxx@xx.com" title="请输入您的邮箱"/>
+                </div>
+                <div class="text-center mt-3">
+                    <!-- 手机号-->
+                    <input  id="regis4" class="form-control" type="text" maxlength="11" placeholder="Phone：xxxxxxxxxxx" title="请输入您的手机号" name="phone"/>
+                </div>
+                <!--<div class="text-center mt-3">-->
+                    <!--&lt;!&ndash;确认注册 &ndash;&gt;-->
+                    <!--<input type="checkbox"/>-->
+                    <!--<a href="javascript:;" title="注册协议"> registration agreement</a>-->
+                <!--</div>-->
+                <div class="text-center mt-5 mb-5 ">
+                    <input type="submit" class="btn btn-outline-primary" value="Confirm registration" title="确认注册" onclick="regis()"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 如果已有账号，点此进行登录 -->
+    <div class="card mt-2">
+        <span class="text-center" title="如果已有账号，点此进行登录"> <a href="javascript:;">If you already have an account, click here to log in.</a> </span>
+    </div>
+    <!-- 登录 -->
+    <div class="card mt-2 display-1">
+        <a class="text-center card-header" href="login.html" id="loginone">LOGIN</a>
+    </div>
+
+</div>
+<!--引入 “脚”-->
+<footer>
+    <iframe src="footer.html" frameborder="0" scrolling="no" class="my_footer"></iframe>
+</footer>
+</body>
+</html>	

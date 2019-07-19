@@ -1,0 +1,17 @@
+/*footer css样式*/
+.footcont{  margin-left:auto; }
+/* .breadcrumb 背景颜色*/
+.footcont .breadcrumb{  margin: 0 auto !important;  }
+/*a标签颜色*/
+.footcont a{ color: #bb4e71 !important;  }
+ /*版权颜色*/
+.footcont .ahei{  color: #0a0a0a !important;  }
+/*媒体查询 767px 以下*/
+@media screen and (max-width:768px){
+    /* 脚 图片居中*/
+    #footimg{  text-align: center;  }
+    /*脚，关于我们，隐藏*/
+    #footabout{  display:none;  }
+    /*脚 备案 居中*/
+    .ahei{  display:block;  margin-left:5px;  text-align: center;  }
+}

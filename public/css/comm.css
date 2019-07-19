@@ -1,0 +1,23 @@
+/*body主体样式*/
+*{margin:0;padding: 0;}
+body{  color:#000;font-size:14px;
+ background: #f2f2f2;  }
+/*面包屑导航修改连接符号*/
+.breadcrumb-item + .breadcrumb-item::before{ content:"|";}
+/*去除input和选中时的样式*/
+input,input:focus{ box-shadow:none !important;}
+/*去除a标签下划线*/
+a{text-decoration: none;}
+/*去除list的点*/
+ul,li{list-style: none;}
+/*光标设置*/
+#unknown,.ahei{cursor:pointer;}
+
+/****登录/注册页面css样式 ****/
+/*标题头部 字体20px  登录表单居中 */
+#loginone,#regisone{ color: #ff524a;  display:block;  font-size:18px;  }
+#formlogin,#formregis{  width: 50%;  margin: 0 auto;  }
+
+/***** 媒体查询 控制iframe  ******/
+ .my_header,.my_footer{width:100%;}
+

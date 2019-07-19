@@ -1,0 +1,51 @@
+/*主页 css样式*/
+/*header 的css样式  头 不要点击 字体样式 */
+#unknown{  font-size:5px;  }
+/*导航栏 css样式调整*/
+#navpink{  background: rgba(226,147,162,0.3) !important;border-radius:5px; }
+#navpink .btn{ font-size:20px; }
+#navpink button a{ height:20px;}
+#navpink div ul li a{ font-size: 16px;}
+
+/*导航栏文本间距*/
+#content ul li{ margin:0 9.5%; margin-top:8px;}
+#content ul li a:hover{color:#000;transition:1.5s linear;}
+#content ul li .active{border-bottom:1px solid #745bdd;}
+
+/******************  homecont 的css样式 ***********/
+/*title_font 标题的样式 卡片样式*/
+#homecont .title_font{ font-size:1.4rem;font-weight:bold;color:#4f4f4f;margin-left:4px;}
+#homecont .card a{color:#000;}
+#homecont .card a:hover{color: #4f4f4f;transition:0.25s linear; }
+
+/*轮播图  指示器样式*/
+.carousel-indicators li{ width:10px;background-color: rgba(255, 82, 74, 0.3); bottom: -30px; }
+.carousel-indicators li.active{  background-color: rgba(10, 10, 10, 0.8); }
+
+/*左右箭头 样式*/
+.carousel-control-next,.carousel-control-prev { width:3%; height:25%;top:40%;background: rgba(46, 46, 46, 0.8);border-radius:10px;  }
+.carousel-control-next{ right:16%;}
+.carousel-control-prev{ left:16%;}
+
+
+/*媒体查询*/
+/*991px~1200px*/
+@media screen and (min-width:991px)and (max-width:1200px){
+    #content ul li{ margin:0 6%; margin-top:8px;}
+}
+/*媒体查询  991px 以下*/
+@media screen and (max-width:991px){
+    /*头 logo图片 不要点击 隐藏*/
+    #unknown,#header div a img{  display:none; }
+}
+/*768px~991px*/
+@media screen and (min-width:768px) and (max-width: 991px)  {
+    #content ul li{ margin:0 2%; margin-top:8px;}
+    .carousel-control-next{ right:0;}
+    .carousel-control-prev{ left:0;}
+}
+/* 768px以下 */
+@media screen and (max-width:768px){
+    .card{  width: 70%;  margin: auto;  }
+    .container .carousel {margin-top:25px;}
+}
